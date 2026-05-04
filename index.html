@@ -81,15 +81,16 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Categorie FPV -->
                 <div class="group relative overflow-hidden h-[450px] card-blur">
-                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500"></div>
-                    <iframe class="w-full h-full object-cover" 
+                    <!-- L'overlay ne doit pas bloquer les clics (pointer-events-none) -->
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500 pointer-events-none z-10"></div>
+                    <iframe class="w-full h-full object-cover relative z-0" 
                         src="https://www.youtube.com/embed/zbPsA8IrAT0" 
                         title="YouTube video player" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         allowfullscreen>
                     </iframe>
-                    <div class="absolute bottom-4 left-4 bg-black/60 px-4 py-2 backdrop-blur-sm">
+                    <div class="absolute bottom-4 left-4 bg-black/60 px-4 py-2 backdrop-blur-sm z-20 pointer-events-none">
                         <h4 class="text-lg font-bold uppercase tracking-tighter">Drone <span class="text-gray-500">FPV</span></h4>
                         <p class="text-[10px] text-gray-400 uppercase tracking-widest">Dernière réalisation</p>
                     </div>
